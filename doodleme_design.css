@@ -1,0 +1,49 @@
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+h1{
+	font-family: 'Bebas Neue', cursive, sans-serif;
+	font-weight: 100;
+	font-size: 3rem;
+	letter-spacing: 0.2rem;
+	padding:10px 7rem 10px 1.5rem;
+	margin-bottom: 0px;
+	color: #c4022f;
+}
+
+h2{
+	font-family: 'Bebas Neue', cursive, sans-serif;
+	font-weight: 100;
+	font-size: 3rem;
+	letter-spacing: 20px;
+	color: white;
+}
+
+
+
+.navbar-brand{
+	padding: 0px 0px ;
+}
+
+#doodlenav.scrolled{
+	background-color:#ffffff !important;
+	transition: all 300ms ease;
+}
+
+.nav-link{
+	font-family: 'Bebas Neue', cursive, sans-serif;
+	color: black;
+	letter-spacing: 0.8px;
+	margin: 0 2rem;
+	position: relative;
+}
+
+
+
