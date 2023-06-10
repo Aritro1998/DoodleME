@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width , initial-scale=1">
+		<title>DOODLEme!</title>
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap" rel="stylesheet">
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+		<link rel="stylesheet" type="text/css" href="doodleme_design.css">
+	</head>
+	
+	<body>
+		<nav class="navbar navbar-expand-lg navbar-light py-0 fixed-top" id="doodlenav" >
+			<div class="container-fluid">
+				<a class="navbar-brand" href="#"><h1>DOODLEme!</h1></a>
+				<button id="nav_btn" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation" onclick="clickListenter()">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse justify-content" id="navbarNavAltMarkup">
+					<div class="navbar-nav" id="navlist">
+						<a class="nav-link" aria-current="page" href="#about_sec">ABOUT</a>
+						<a class="nav-link" href="#doodle1_sec">FOOTBALL DOODLE</a>
+						<a class="nav-link" href="#">DOODLE 2</a>
+						<a class="nav-link" href="#">DOODLE 3</a>
+						<a class="nav-link" href="#">DOODLE 4</a>
+						<a class="nav-link" href="#">DOODLE 5</a>
+					</div>
+				</div>
+			</div>
+		</nav>
+	
+		<section class="container-fluid px-0" id="doodle1_sec">
+			<div class="row align-items-center">
+				<div class="col-lg-6 order-lg-1 order-md-2 order-sm-2">
+					<img  class="img-fluid" id="img_stick_football">
+				</div>
+				<div class="col-lg-6 order-lg-2 order-md-1 order-sm-1">
+					<div class="row justify-content-center">
+						<div class="col-10 ">
+							<h2 class="text-center">Football Doodle</h2>
+							<p class="text-center">Look at Asish, so focused on his football practice. Let's try to distract him and see what happens.</p>	
+						</div>
+						<button type="button" class="btn" onclick="onBtnPressSayHi()">Distract 
+							<span class="dots-cont">
+								<span class="dot dot-1"></span>
+								<span class="dot dot-2"></span>
+								<span class="dot dot-3"></span>
+							</span>
+						</button>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+		
+		<script src="nav_btn_listener.js"></script>
+	
+		<script src='image_animate.js'></script>
+
+
+		<script>
+			$(function(){
+				$(document).scroll(function(){
+					var $nav=$("#doodlenav");
+					$nav.toggleClass("scrolled",$(this).scrollTop()>$nav.height()/2);
+				});
+			});
+		</script>
+
+		<script>
+			$('.navbar-collapse a').click(function(){
+				$(".navbar-collapse").collapse('hide');
+				clickListenter();
+			});
+		</script>
+	
+	</body>
+</html>
